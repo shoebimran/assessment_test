@@ -1,0 +1,26 @@
+<div id="<%= dom_id user %>">
+  <p>
+    <strong>Name:</strong>
+    <%= user.name %>
+  </p>
+
+  <p>
+    <strong>Age:</strong>
+    <%= user.age %>
+  </p>
+
+  <p>
+    <strong>Kind:</strong>
+    <%= user.kind %>
+  </p>
+
+  <p id='favorite_teachers'>
+    <strong>Favorite Teachers:</strong>
+    <%= user.favorite_teachers.map(&:name).join(', ') %>
+  </p>
+
+  <p id='classmates'>
+    <strong>Class Mates:</strong>
+    <%= User.classmates(user).map(&:name).join(', ') %>
+  </p>
+</div>
